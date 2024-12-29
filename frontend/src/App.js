@@ -89,8 +89,6 @@ const App = () => {
         />
         <ul className="w-full mt-5 bg-white shadow rounded-lg divide-y divide-gray-200">
           {data.filter(item => {
-            console.log(filterText);
-            console.log(item?.content.includes(filterText), item?.date.includes(filterText), filterText == "");
             return item?.content.includes(filterText) || item?.date.includes(filterText) || filterText == ""
           }).map((item) => (
             <li key={item.id} className="flex flex-wrap justify-between items-center p-4">
