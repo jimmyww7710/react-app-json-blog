@@ -23,29 +23,29 @@ To get started with the project, follow these steps:
    ```
    
 3. Install the backend dependencies:
-  ```bash
-  npm install
-  ```
+   ```bash
+   npm install
+   ```
 
 4. Install the frontend dependencies:
-  ```bash
-  cd frontend
-  npm install
-  ```
+   ```bash
+   cd frontend
+   npm install
+   ```
 
 5. Start the backend:
-  ```bash
-  cd ..
-  cd backend
-  node server.js
-  ```
+   ```bash
+   cd ..
+   cd backend
+   node server.js
+   ```
 
 6. Start the frontend:
-  ```bash
-  cd ..
-  cd frontend
-  npm run start
-  ```
+   ```bash
+   cd ..
+   cd frontend
+   npm run start
+   ```
 ## Usage
 
   To view the app, open your browser and go to http://localhost:3000.
