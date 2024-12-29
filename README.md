@@ -23,40 +23,40 @@ To get started with the project, follow these steps:
    ```
    
 3. Install the backend dependencies:
-```bash
+  ```bash
   npm install
-```
+  ```
 
 4. Install the frontend dependencies:
-```bash
+  ```bash
   cd frontend
   npm install
-```
+  ```
 
 5. Start the backend:
-```bash
+  ```bash
   cd ..
   cd backend
   node server.js
-```
+  ```
 
 6. Start the frontend:
-```bash
+  ```bash
   cd ..
   cd frontend
   npm run start
-```
+  ```
 ## Usage
 
-To view the app, open your browser and go to http://localhost:3000.
-and backend would run at http://localhost:5000 defaultly.|
+  To view the app, open your browser and go to http://localhost:3000.
+  and backend would run at http://localhost:5000 defaultly.|
 
 ## License
 
-MIT
+  MIT
 
 ## Contact
 
-For questions or support, feel free to reach out to me at:  
-Email: your-email@example.com
+  For questions or support, feel free to reach out to me at:  
+  Email: jimmyww7710@gmail.com
   
