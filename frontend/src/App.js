@@ -1,10 +1,16 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { MdOutlineAddCircleOutline, MdOutlineRemoveCircleOutline } from 'react-icons/md';
+import Popup from './component/Popup';
 
 const App = () => {
   const [data, setData] = useState([]);
   const [filterText, setFilterText] = useState("");
   const [newItem, setNewItem] = useState("");
+  const [isPopupOpen, setPopupOpen] = useState(false);
+  const [popupId, setPopupId] = useState(null);
+
+  const closePopup = () => setPopupOpen(false);
 
   useEffect(() => {
     fetchData();
@@ -52,12 +58,19 @@ const App = () => {
   };
 
   const deleteItem = async (id) => {
+    console.log(id);
     try {
+      console.log('test');
       await axios.delete(`http://localhost:5000/api/data/${id}`);
       setData(data.filter((item) => item.id !== id));
     } catch (error) {
       console.error("Error deleting item", error);
     }
+  };
+
+  const confirmPopup = async (id) => {
+    setPopupOpen(true);
+    setPopupId(id);
   };
 
   return (
@@ -76,7 +89,7 @@ const App = () => {
             onClick={addItem}
             className="bg-blue-500 text-white px-4 py-2 rounded-lg shadow hover:bg-blue-600 transition"
           >
-            Add
+            <MdOutlineAddCircleOutline />
           </button>
         </div>
         <label for="">filter: </label>
@@ -96,10 +109,10 @@ const App = () => {
               <div class="w-full flex justify-between mb-2">
                 <span className="text-gray-700" >{item.date}</span>
                 <button
-                  onClick={() => deleteItem(item.id)}
+                  onClick={() => confirmPopup(item.id)}
                   className="text-red-500 hover:text-red-600 transition"
                 >
-                  Delete
+                  <MdOutlineRemoveCircleOutline />
                 </button>
               </div>
 
@@ -109,6 +122,7 @@ const App = () => {
           ))}
         </ul>
       </section>
+      <Popup isOpen={isPopupOpen} popupId={popupId} closePopup={closePopup} callBack={deleteItem} title={'Confirm to delete this item?'} />
     </div>
   );
 };
