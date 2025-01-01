@@ -76,7 +76,7 @@ const App = () => {
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col p-5 items-center">
       <h1 className="text-3xl font-bold text-gray-800 mb-5">Daily Record</h1>
-      <section class="w-[60%]">
+      <section className="w-[60%]">
         <div className="flex space-x-3 mb-5">
           <textarea
             value={newItem}
@@ -92,7 +92,7 @@ const App = () => {
             <MdOutlineAddCircleOutline />
           </button>
         </div>
-        <label for="">filter: </label>
+        <label htmlFor="">filter: </label>
         <input
           type="text"
 
@@ -106,7 +106,7 @@ const App = () => {
           }).map((item) => (
             <li key={item.id} className="flex flex-wrap justify-between items-center p-4">
 
-              <div class="w-full flex justify-between mb-2">
+              <div className="w-full flex justify-between mb-2">
                 <span className="text-gray-700" >{item.date}</span>
                 <button
                   onClick={() => confirmPopup(item.id)}
