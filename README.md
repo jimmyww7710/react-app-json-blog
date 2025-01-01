@@ -1,7 +1,7 @@
 # React-App-Json-Blog
 
 ## Description
-A simple items dairy web application built with **Node.js** and **Express** for the backend, and **React** for the frontend. Users can add (automatically set current date in), delete, and view items which are stored in a json file. It helps with productivity by tracking of daily work.
+A simple items diary web application built with **Node.js** and **Express** for the backend, and **React** for the frontend. Users can add (automatically set current date in), delete, and view items which are stored in a json file. It helps with productivity by tracking of daily work.
 
 ## Table of Contents
 - [Installation](#installation)
