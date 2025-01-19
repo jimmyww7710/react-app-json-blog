@@ -1,5 +1,11 @@
 # React-App-Json-Blog
 
+another project live demo based on this project, can try and take a look at: 
+https://dailyrecord.netlify.app/
+
+repo: 
+https://github.com/jimmyww7710/react-json-diary-localStorage
+
 ## Description
 A simple items diary web application built with **Node.js** and **Express** for the backend, and **React** for the frontend. Users can add (automatically set current date in), delete, and view items which are stored in a json file. It helps with productivity by tracking of daily work.
 
